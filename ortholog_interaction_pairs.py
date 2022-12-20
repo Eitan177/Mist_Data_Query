@@ -16,7 +16,7 @@ numorth=st.selectbox('select a gene that is paired with another gene having a mi
 showmim=st.checkbox('show mim annotations',value=False)
 
 if texttomatch1 != '' or texttomatch2 != '' or filtonnum =='yes':
-    file_exists = exists('mist_interlog_match_genes_sorted.csv.zip')
+    file_exists = exists('mist_interlog_match_genes_sorted.csv')
     if not file_exists:
         with zipfile.ZipFile('mist_interlog_match_genes_sorted.csv.zip', 'r') as zip_ref:   
             zip_ref.extractall('.')    
